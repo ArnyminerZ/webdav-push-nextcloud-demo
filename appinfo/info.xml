@@ -14,14 +14,10 @@
     <author mail="info@bitfire.at" homepage="https://github.com/bitfireAT/webdav-push">bitfire web engineering</author>
     <namespace>PushDemo</namespace>
     <category>tools</category>
-    <bugs>https://github.com/bitfireAT/webdav-push/issues</bugs>
+    <bugs>https://github.com/ArnyminerZ/webdav-push-nextcloud-demo/issues</bugs>
     <dependencies>
         <nextcloud min-version="20" max-version="27"/>
     </dependencies>
     <navigations>
-        <navigation>
-            <name>Push Demo</name>
-            <route>pushdemo.page.index</route>
-        </navigation>
     </navigations>
 </info>
