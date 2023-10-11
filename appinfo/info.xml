@@ -18,6 +18,9 @@
     <dependencies>
         <nextcloud min-version="20" max-version="27"/>
     </dependencies>
-    <navigations>
-    </navigations>
+	<navigations/>
+	<settings>
+		<admin>OCA\PushDemo\Settings\AdminSettings</admin>
+		<admin-section>OCA\PushDemo\Settings\AdminSection</admin-section>
+	</settings>
 </info>
