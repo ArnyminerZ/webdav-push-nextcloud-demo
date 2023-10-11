@@ -23,7 +23,7 @@ if (isset($_GET["director_endpoint"])) {
 
 		<p>
 			<label for="director_endpoint"><?php p($l->t('Director Endpoint')); ?></label>
-			<input id="director_endpoint" name="director_endpoint" type="url" value="<?php echo $_['endpoint'] ?>"/>
+			<input id="director_endpoint" name="director_endpoint" type="url" value="<?php echo $_['endpoint'] ?>" style="width: 400px"/>
 		</p>
 
 		<button type="submit"><?php p($l->t('Save')); ?></button>
