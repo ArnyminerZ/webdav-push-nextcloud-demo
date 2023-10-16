@@ -14,3 +14,19 @@ the end should be the PUSH director.
 # Important repositories
 - Main repository: https://github.com/bitfireAT/webdav-push
 - Push director demo: https://github.com/bitfireAT/webdav-push-director-demo
+
+# Development
+It's required to have a Nextcloud development installation in order to test the application.
+You can follow the instructions at [Nextcloud](https://cloud.nextcloud.com/s/iyNGp8ryWxc7Efa?path=%2F1%20Setting%20up%20a%20development%20environment), to get your environment up and ready for development-
+
+## Requirements
+- **Node:** `^16.0.0`
+- **NPM:** `^8.0.0`
+
+> **Note:**
+> Check in [package.json](./package.json) just in case this isn't updated.
+
+## Installation
+To install the application, just copy the whole repository into `<nextcloud installation>/workspace/server/apps-extra/<repo>`.
+
+You can modify the contents of the folder there whenever you want, so it's a valid approach to simply edit the project there.
