@@ -38,9 +38,12 @@
 		"classmap-authoritative": true,
 		"autoloader-suffix": "PUSH"
 	},
-	"autoload" : {
+	"autoload": {
 		"psr-4": {
 			"OCA\\PushDemo\\": "./lib/"
 		}
+	},
+	"require": {
+		"ext-http": "*"
 	}
 }

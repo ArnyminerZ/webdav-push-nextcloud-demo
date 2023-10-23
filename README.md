@@ -38,8 +38,10 @@ You can follow the instructions at [Nextcloud](https://cloud.nextcloud.com/s/iyN
 ### Dependencies
 - **http-ext**:
   ```shell
+  # Instruction for Ubuntu-based distros, check externally for your platform
   sudo apt update -y
   sudo apt install php-pear php-raphf php-dev -y
+  sudo apt instal libcurl4-openssl-dev zlib1g libevent-dev libicu-dev libidn2-0
   sudo pecl install pecl_http
   ````
 
