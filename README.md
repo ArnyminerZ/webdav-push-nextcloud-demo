@@ -20,6 +20,7 @@ It's required to have a Nextcloud development installation in order to test the 
 You can follow the instructions at [Nextcloud](https://cloud.nextcloud.com/s/iyNGp8ryWxc7Efa?path=%2F1%20Setting%20up%20a%20development%20environment), to get your environment up and ready for development-
 
 ## Requirements
+- **Nextcloud:** `20 <= Nextcloud <= 27`
 - **Node:** `^16.0.0`
 - **NPM:** `^8.0.0`
 
