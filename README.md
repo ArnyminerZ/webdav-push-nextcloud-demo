@@ -27,12 +27,21 @@ It's required to have a Nextcloud development installation in order to test the 
 You can follow the instructions at [Nextcloud](https://cloud.nextcloud.com/s/iyNGp8ryWxc7Efa?path=%2F1%20Setting%20up%20a%20development%20environment), to get your environment up and ready for development-
 
 ## Requirements
+### Engine
 - **Nextcloud:** `20 <= Nextcloud <= 27`
 - **Node:** `^16.0.0`
 - **NPM:** `^8.0.0`
 
 > **Note:**
 > Check in [package.json](./package.json) just in case this isn't updated.
+
+### Dependencies
+- **http-ext**:
+  ```shell
+  sudo apt update -y
+  sudo apt install php-pear php-raphf php-dev -y
+  sudo pecl install pecl_http
+  ````
 
 ## Installation
 To install the application, just copy the whole repository into `<nextcloud installation>/workspace/server/apps-extra/<repo>`.
