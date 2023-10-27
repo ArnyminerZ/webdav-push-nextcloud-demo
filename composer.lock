@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b237b5496742888130d5d71de7e799fc",
+    "content-hash": "5fb94c06e88ce023f247a7521ea83f81",
     "packages": [],
     "packages-dev": [
         {
@@ -183,12 +183,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nextcloud-deps/ocp.git",
-                "reference": "a74e96645848edc4c29ed65629543ecec4cfaea1"
+                "reference": "89782b01a6e496b6e4e16a449cb25eebc78a2359"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nextcloud-deps/ocp/zipball/a74e96645848edc4c29ed65629543ecec4cfaea1",
-                "reference": "a74e96645848edc4c29ed65629543ecec4cfaea1",
+                "url": "https://api.github.com/repos/nextcloud-deps/ocp/zipball/89782b01a6e496b6e4e16a449cb25eebc78a2359",
+                "reference": "89782b01a6e496b6e4e16a449cb25eebc78a2359",
                 "shasum": ""
             },
             "require": {
@@ -220,7 +220,7 @@
                 "issues": "https://github.com/nextcloud-deps/ocp/issues",
                 "source": "https://github.com/nextcloud-deps/ocp/tree/master"
             },
-            "time": "2023-10-20T00:31:29+00:00"
+            "time": "2023-10-27T00:30:38+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -391,16 +391,16 @@
         },
         {
             "name": "php-cs-fixer/shim",
-            "version": "v3.35.1",
+            "version": "v3.36.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHP-CS-Fixer/shim.git",
-                "reference": "39dc3830797e107a21f8cfaca99fd0838950f8c2"
+                "reference": "78e6d81bb56987d97c47e006a79f445b6310e4d0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHP-CS-Fixer/shim/zipball/39dc3830797e107a21f8cfaca99fd0838950f8c2",
-                "reference": "39dc3830797e107a21f8cfaca99fd0838950f8c2",
+                "url": "https://api.github.com/repos/PHP-CS-Fixer/shim/zipball/78e6d81bb56987d97c47e006a79f445b6310e4d0",
+                "reference": "78e6d81bb56987d97c47e006a79f445b6310e4d0",
                 "shasum": ""
             },
             "require": {
@@ -437,9 +437,9 @@
             "description": "A tool to automatically fix PHP code style",
             "support": {
                 "issues": "https://github.com/PHP-CS-Fixer/shim/issues",
-                "source": "https://github.com/PHP-CS-Fixer/shim/tree/v3.35.1"
+                "source": "https://github.com/PHP-CS-Fixer/shim/tree/v3.36.0"
             },
-            "time": "2023-10-12T13:48:08+00:00"
+            "time": "2023-10-27T10:15:48+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -2740,89 +2740,6 @@
             "time": "2023-05-23T14:45:45+00:00"
         },
         {
-            "name": "symfony/polyfill-mbstring",
-            "version": "v1.28.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "42292d99c55abe617799667f454222c54c60e229"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/42292d99c55abe617799667f454222c54c60e229",
-                "reference": "42292d99c55abe617799667f454222c54c60e229",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.1"
-            },
-            "provide": {
-                "ext-mbstring": "*"
-            },
-            "suggest": {
-                "ext-mbstring": "For best performance"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-main": "1.28-dev"
-                },
-                "thanks": {
-                    "name": "symfony/polyfill",
-                    "url": "https://github.com/symfony/polyfill"
-                }
-            },
-            "autoload": {
-                "files": [
-                    "bootstrap.php"
-                ],
-                "psr-4": {
-                    "Symfony\\Polyfill\\Mbstring\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Nicolas Grekas",
-                    "email": "p@tchwork.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony polyfill for the Mbstring extension",
-            "homepage": "https://symfony.com",
-            "keywords": [
-                "compatibility",
-                "mbstring",
-                "polyfill",
-                "portable",
-                "shim"
-            ],
-            "support": {
-                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.28.0"
-            },
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2023-07-28T09:04:16+00:00"
-        },
-        {
             "name": "symfony/polyfill-php80",
             "version": "v1.28.0",
             "source": {
@@ -2963,9 +2880,7 @@
     },
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": {
-        "ext-http": "*"
-    },
+    "platform": [],
     "platform-dev": [],
     "platform-overrides": {
         "php": "8.1"
