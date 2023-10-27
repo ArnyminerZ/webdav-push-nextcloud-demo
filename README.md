@@ -28,7 +28,7 @@ You can follow the instructions at [Nextcloud](https://cloud.nextcloud.com/s/iyN
 
 ## Requirements
 ### Engine
-- **Nextcloud:** `20 <= Nextcloud <= 27`
+- **Nextcloud:** `20 <= Nextcloud <= 28`
 - **Node:** `^16.0.0`
 - **NPM:** `^8.0.0`
 
