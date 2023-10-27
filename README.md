@@ -22,6 +22,16 @@ potential problem.
 - Main repository: https://github.com/bitfireAT/webdav-push
 - Push director demo: https://github.com/bitfireAT/webdav-push-director-demo
 
+# Supported Features
+- Calendar (CalDAV)
+  - Create Event
+  - Delete Event
+  - Update Event
+- Contacts (CardDAV)
+  - Create Card
+  - Delete Card
+  - Update Card
+
 # Development
 It's required to have a Nextcloud development installation in order to test the application.
 You can follow the instructions at [Nextcloud](https://cloud.nextcloud.com/s/iyNGp8ryWxc7Efa?path=%2F1%20Setting%20up%20a%20development%20environment), to get your environment up and ready for development-
