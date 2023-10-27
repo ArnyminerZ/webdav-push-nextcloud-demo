@@ -7,7 +7,7 @@
     -->
     <id>pushdemo</id>
     <name>Push Demo</name>
-    <summary>This app allows you to send push notifications from your Nextcloud server to different clients, including mobile devices, desktop computers, and web browsers.</summary>
+    <summary>This app allows you to send push notifications from your Nextcloud server to different clients.</summary>
     <description><![CDATA[This app allows you to send push notifications from your Nextcloud server to different clients, including mobile devices, desktop computers, and web browsers.]]></description>
     <version>0.0.1</version>
     <licence>agpl</licence>
@@ -18,7 +18,6 @@
     <dependencies>
         <nextcloud min-version="20" max-version="28"/>
     </dependencies>
-	<navigations/>
 	<settings>
 		<admin>OCA\PushDemo\Settings\AdminSettings</admin>
 		<admin-section>OCA\PushDemo\Settings\AdminSection</admin-section>
