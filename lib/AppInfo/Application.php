@@ -11,6 +11,11 @@ use OCP\AppFramework\Bootstrap\IBootContext;
 use OCP\AppFramework\Bootstrap\IBootstrap;
 use OCP\AppFramework\Bootstrap\IRegistrationContext;
 use OCA\DAV\Events\CalendarObjectCreatedEvent;
+use OCA\DAV\Events\CalendarObjectDeletedEvent;
+use OCA\DAV\Events\CalendarObjectUpdatedEvent;
+use OCA\DAV\Events\CardCreatedEvent;
+use OCA\DAV\Events\CardDeletedEvent;
+use OCA\DAV\Events\CardUpdatedEvent;
 
 class Application extends App implements IBootstrap {
 	public const APP_ID = 'pushdemo';
@@ -21,7 +26,13 @@ class Application extends App implements IBootstrap {
 
 	public function register(IRegistrationContext $context): void
 	{
-		$context->registerEventListener(CalendarObjectCreatedEvent::class, AddEventListener::class);
+        $context->registerEventListener(CalendarObjectCreatedEvent::class, AddEventListener::class);
+        $context->registerEventListener(CalendarObjectDeletedEvent::class, AddEventListener::class);
+        $context->registerEventListener(CalendarObjectUpdatedEvent::class, AddEventListener::class);
+
+        $context->registerEventListener(CardCreatedEvent::class, AddEventListener::class);
+        $context->registerEventListener(CardDeletedEvent::class, AddEventListener::class);
+        $context->registerEventListener(CardUpdatedEvent::class, AddEventListener::class);
 	}
 
 	public function boot(IBootContext $context): void

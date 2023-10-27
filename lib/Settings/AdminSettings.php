@@ -36,10 +36,12 @@ class AdminSettings implements IDelegatedSettings {
 	 */
 	public function getForm(): TemplateResponse
 	{
-		$endpoint = $this->config->getAppValue('pushdemo', 'endpoint');
+        $endpoint = $this->config->getAppValue('pushdemo', 'endpoint');
+        $auth_arg = $this->config->getAppValue('pushdemo', 'auth_arg');
 
 		$parameters = [
 			'endpoint' => $endpoint,
+            'auth_arg' => $auth_arg,
 			'config' => $this->config
 		];
 
