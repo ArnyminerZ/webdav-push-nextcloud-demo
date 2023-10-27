@@ -5,7 +5,7 @@
     SPDX-FileCopyrightText: bitfire web engineering GmbH <info@bitfire.at>
     SPDX-License-Identifier: CC0-1.0
     -->
-    <id>webdav-push-nextcloud-demo</id>
+    <id>pushdemo</id>
     <name>Push Demo</name>
     <summary>This app allows you to send push notifications from your Nextcloud server to different clients.</summary>
     <description><![CDATA[This app allows you to send push notifications from your Nextcloud server to different clients, including mobile devices, desktop computers, and web browsers.]]></description>
