@@ -42,8 +42,5 @@
 		"psr-4": {
 			"OCA\\PushDemo\\": "./lib/"
 		}
-	},
-	"require": {
-		"ext-http": "*"
 	}
 }
