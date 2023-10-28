@@ -32,6 +32,24 @@ potential problem.
   - Delete Card
   - Update Card
 
+# Installation
+> **Important!** The directory MUST be named `pushdemo`, use the clone command below for instructions.
+
+To install, access the `workspace/server/apps-extra` directory on your server, if you are using Docker (or `apps` if
+installed directly). Check the individual requirements for your specific installation. Then, use the command below to
+clone the repository:
+```shell
+git clone https://github.com/ArnyminerZ/webdav-push-nextcloud-demo.git pushdemo
+```
+Then, in an administrator account at Nextcloud, go to `/settings/apps/disabled`, and enable the "Push Demo" app:
+![Enable app](/img/enable.png)
+
+## Configuration
+Now access `/settings/admin/pushdemo` on a Nextcloud admin account, and configure your Push Endpoint and authentication
+argument.
+
+> See https://github.com/bitfireAT/webdav-push-director-demo for an example push director.
+
 # Development
 It's required to have a Nextcloud development installation in order to test the application.
 You can follow the instructions at [Nextcloud](https://cloud.nextcloud.com/s/iyNGp8ryWxc7Efa?path=%2F1%20Setting%20up%20a%20development%20environment), to get your environment up and ready for development-
