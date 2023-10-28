@@ -7,7 +7,7 @@ function submitForm(id, confirmationKeyword) {
 	const endpoint = endpointField.value;
 
 	const xhr = new XMLHttpRequest();
-	xhr.open("GET", `/index.php/settings/admin/pushdemo?${id}=${endpoint}`, true);
+	xhr.open("GET", `${window.location.href}?${id}=${endpoint}`, true);
 	xhr.setRequestHeader('Content-Type', 'application/json');
 	xhr.onreadystatechange = function () {
 		if (this.readyState !== 4) return;
