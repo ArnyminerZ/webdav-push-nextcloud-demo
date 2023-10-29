@@ -30,9 +30,7 @@ class AddEventListener implements IEventListener {
 
 	public function handle(Event $event): void {
 		if (!($event instanceOf CalendarObjectCreatedEvent) && !($event instanceOf CalendarObjectDeletedEvent) &&
-            !($event instanceOf CalendarObjectUpdatedEvent) &&
-            !($event instanceOf CardCreatedEvent) && !($event instanceOf CardDeletedEvent) &&
-            !($event instanceOf CardUpdatedEvent)) {
+            !($event instanceOf CalendarObjectUpdatedEvent)) {
 			$this->logger->error('AddEventListener received an unknown event.');
 			return;
 		}
@@ -49,7 +47,10 @@ class AddEventListener implements IEventListener {
             return;
         }
 
-		$this->logger->warning('Event data: ' . implode($event->getObjectData()));
+		$data = implode($event->getObjectData());
+		// Take the first 37 chars (the uuid of the event)
+		$uuid = substr($data, 0, 37);
+		$this->logger->warning('Event data: ' . implode(', ', $event->getObjectData()));
 
         $this->logger->debug('Calling push director...');
         $response = file_get_contents($endpoint . '?auth=' . $auth_arg . '&topic=TOPIC'); // TODO - complete topic

@@ -30,9 +30,9 @@ class Application extends App implements IBootstrap {
         $context->registerEventListener(CalendarObjectDeletedEvent::class, AddEventListener::class);
         $context->registerEventListener(CalendarObjectUpdatedEvent::class, AddEventListener::class);
 
-        $context->registerEventListener(CardCreatedEvent::class, AddEventListener::class);
-        $context->registerEventListener(CardDeletedEvent::class, AddEventListener::class);
-        $context->registerEventListener(CardUpdatedEvent::class, AddEventListener::class);
+        // $context->registerEventListener(CardCreatedEvent::class, AddEventListener::class);
+        // $context->registerEventListener(CardDeletedEvent::class, AddEventListener::class);
+        // $context->registerEventListener(CardUpdatedEvent::class, AddEventListener::class);
 	}
 
 	public function boot(IBootContext $context): void

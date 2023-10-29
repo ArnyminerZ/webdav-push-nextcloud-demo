@@ -27,10 +27,10 @@ potential problem.
   - Create Event
   - Delete Event
   - Update Event
-- Contacts (CardDAV)
-  - Create Card
-  - Delete Card
-  - Update Card
+- ~Contacts (CardDAV)~
+  - ~Create Card~
+  - ~Delete Card~
+  - ~Update Card~
 
 # Installation
 > **Important!** The directory MUST be named `pushdemo`, use the clone command below for instructions.
