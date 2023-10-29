@@ -47,13 +47,14 @@ class AddEventListener implements IEventListener {
             return;
         }
 
-		$data = implode($event->getObjectData());
-		// Take the first 37 chars (the uuid of the event)
-		$uuid = substr($data, 0, 37);
-		$this->logger->warning('Event data: ' . implode(', ', $event->getObjectData()));
+		$data = $event->getObjectData();
+		$uuid = $data[3]; // Event ID
+		$this->logger->debug('Event data: ' . implode(', ', $data));
 
         $this->logger->debug('Calling push director...');
-        $response = file_get_contents($endpoint . '?auth=' . $auth_arg . '&topic=TOPIC'); // TODO - complete topic
+        $response = file_get_contents(
+			$endpoint . '?auth=' . $auth_arg . '&topic=' . base64_encode($uuid)
+		);
         $this->logger->info('Director result: ' . $response);
 
         $this->logger->warning('Sent update to PUSH director!');
