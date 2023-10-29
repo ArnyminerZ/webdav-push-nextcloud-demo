@@ -49,6 +49,8 @@ class AddEventListener implements IEventListener {
             return;
         }
 
+		$this->logger->warning('Event data: ' . implode($event->getObjectData()));
+
         $this->logger->debug('Calling push director...');
         $response = file_get_contents($endpoint . '?auth=' . $auth_arg . '&topic=TOPIC'); // TODO - complete topic
         $this->logger->info('Director result: ' . $response);
