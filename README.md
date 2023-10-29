@@ -77,3 +77,15 @@ You can follow the instructions at [Nextcloud](https://cloud.nextcloud.com/s/iyN
 To install the application, just copy the whole repository into `<nextcloud installation>/workspace/server/apps-extra/<repo>`.
 
 You can modify the contents of the folder there whenever you want, so it's a valid approach to simply edit the project there.
+
+# Reference
+
+Just as a reference, for the event listener ([AddEventListener.php](/lib/Listener/AddEventListener.php)), calling
+`getObjectData` on the event, eg
+```php
+$event->getObjectData()
+```
+returns data as follows:
+```
+2F2AEAF46-B92A-4995-BB80-C98C49EE85DF.ics1698570435\"f335608aff66dfcf8911d153cc03cf59\"1370BEGIN:VCALENDAR\r\nPRODID:-//IDN nextcloud.com//Calendar app 4.5.2//EN\r\nCALSCALE:GREGORIAN\r\nVERSION:2.0\r\nBEGIN:VEVENT\r\nCREATED:20231029T090710Z\r\nDTSTAMP:20231029T090714Z\r\nLAST-MODIFIED:20231029T090714Z\r\nSEQUENCE:2\r\nUID:c2ad9b09-bca3-4354-bea8-a73db40e3b1e\r\nDTSTART;VALUE=DATE:20231029\r\nDTEND;VALUE=DATE:20231030\r\nSTATUS:CONFIRMED\r\nSUMMARY:test 1\r\nEND:VEVENT\r\nEND:VCALENDARvevent0
+```
