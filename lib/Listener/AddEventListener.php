@@ -58,7 +58,7 @@ class AddEventListener implements IEventListener {
 
 		$this->logger->info('Calling push director...');
         $response = file_get_contents(
-            $endpoint . '?auth=' . $auth_arg . '&topic=' . $encoded_uuid
+            $endpoint . '?auth=' . $auth_arg . '&topic=' . $encoded_topic
         );
         $this->logger->info('Director result: ' . $response);
 
