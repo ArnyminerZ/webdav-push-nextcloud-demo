@@ -83,9 +83,33 @@ You can modify the contents of the folder there whenever you want, so it's a val
 Just as a reference, for the event listener ([AddEventListener.php](/lib/Listener/AddEventListener.php)), calling
 `getObjectData` on the event, eg
 ```php
-$event->getObjectData()
+implode(', ', $event->getObjectData())
 ```
 returns data as follows:
 ```
-2F2AEAF46-B92A-4995-BB80-C98C49EE85DF.ics1698570435\"f335608aff66dfcf8911d153cc03cf59\"1370BEGIN:VCALENDAR\r\nPRODID:-//IDN nextcloud.com//Calendar app 4.5.2//EN\r\nCALSCALE:GREGORIAN\r\nVERSION:2.0\r\nBEGIN:VEVENT\r\nCREATED:20231029T090710Z\r\nDTSTAMP:20231029T090714Z\r\nLAST-MODIFIED:20231029T090714Z\r\nSEQUENCE:2\r\nUID:c2ad9b09-bca3-4354-bea8-a73db40e3b1e\r\nDTSTART;VALUE=DATE:20231029\r\nDTEND;VALUE=DATE:20231030\r\nSTATUS:CONFIRMED\r\nSUMMARY:test 1\r\nEND:VEVENT\r\nEND:VCALENDARvevent0
+30, 623CB73D-F0CD-482A-B649-A4F94424AB5A.ics, 1700650727, \"1e654a8af494642118ffbc43ac4791fe\", 1, 746, BEGIN:VCALENDAR\r\nPRODID:-//IDN nextcloud.com//Calendar app 4.5.3//EN\r\nCALSCALE:GREGORIAN\r\nVERSION:2.0\r\nBEGIN:VEVENT\r\nCREATED:20231122T105845Z\r\nDTSTAMP:20231122T105846Z\r\nLAST-MODIFIED:20231122T105846Z\r\nSEQUENCE:2\r\nUID:ffc256a6-0ea7-4064-9f9a-97aa0b79e200\r\nDTSTART, TZID=Europe/Madrid:20231122T120045\r\nDTEND, TZID=Europe/Madrid:20231122T130045\r\nSTATUS:CONFIRMED\r\nSUMMARY:asdfasdf\r\nEND:VEVENT\r\nBEGIN:VTIMEZONE\r\nTZID:Europe/Madrid\r\nBEGIN:DAYLIGHT\r\nTZOFFSETFROM:+0100\r\nTZOFFSETTO:+0200\r\nTZNAME:CEST\r\nDTSTART:19700329T020000\r\nRRULE:FREQ=YEARLY, BYMONTH=3, BYDAY=-1SU\r\nEND:DAYLIGHT\r\nBEGIN:STANDARD\r\nTZOFFSETFROM:+0200\r\nTZOFFSETTO:+0100\r\nTZNAME:CET\r\nDTSTART:19701025T030000\r\nRRULE:FREQ=YEARLY, BYMONTH=10, BYDAY=-1SU\r\nEND:STANDARD\r\nEND:VTIMEZONE\r\nEND:VCALENDAR, vevent, 0, 
+```
+
+And calling `getCalendarData`:
+```php
+json_encode($event->getCalendarData())
+```
+gives:
+```json
+{
+  "id": 1,
+  "uri": "personal",
+  "principaluri": "principals/users/test",
+  "{http://calendarserver.org/ns/}getctag": "http://sabre.io/ns/sync/29",
+  "{http://sabredav.org/ns}sync-token": 29,
+  "{urn:ietf:params:xml:ns:caldav}supported-calendar-component-set": {},
+  "{urn:ietf:params:xml:ns:caldav}schedule-calendar-transp": {},
+  "{DAV:}displayname": "Personal",
+  "{urn:ietf:params:xml:ns:caldav}calendar-description": null,
+  "{urn:ietf:params:xml:ns:caldav}calendar-timezone": null,
+  "{http://apple.com/ns/ical/}calendar-order": 0,
+  "{http://apple.com/ns/ical/}calendar-color": "#0082c9",
+  "{http://nextcloud.com/ns}deleted-at": null,
+  "{http://nextcloud.com/ns}owner-displayname": "test admin user"
+}
 ```
