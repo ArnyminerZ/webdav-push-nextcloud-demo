@@ -47,10 +47,10 @@ class AddEventListener implements IEventListener {
             return;
         }
 
-		$this->processCall($event->getObjectData(), $event->getCalendarData());
+		$this->processCall($endpoint, $auth_arg, $event->getObjectData(), $event->getCalendarData());
     }
 
-	public function processCall(array $objectData, array $calendarData) {
+	public function processCall(string $endpoint, string $auth_arg, array $objectData, array $calendarData) {
 		$topic = $calendarData['uri']; // Collection URI
 		$encoded_topic = hash('sha512', $topic);
 
